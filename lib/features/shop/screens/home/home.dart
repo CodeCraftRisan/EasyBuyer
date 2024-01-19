@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../common/widgets/custom_shapes/containers/circular_container.dart';
+
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
 
@@ -8,50 +10,30 @@ class Homescreen extends StatelessWidget {
     return  Scaffold(
       body: SingleChildScrollView(
         child: Column(
-        children: [
-          Container(
-            color: TColors.primary,
-            padding: const EdgeInsets.all(0),
-            child: Stack(
-              children: [
-                TCircularContainer(),
-              ],
-            ),
-          )
-        ],
+          children: [
+            ClipPath(
+              clipper: ,
+              child: Container(
+                color: TColors.primary,
+                padding: const EdgeInsets.all(0),
+                child: SizedBox(
+                  height:400,
+                  child:Stack(
+                    children: [
+                      Positioned(top: -150, right: -250,child: TCircularContainer(backgroundCoIor: TColors.textWhite.withOpacity(0.1))),
+                      Positioned(top:100, right: -300, child: TCircularContainer(backgroundCoIor: TColors.textWhite.withOpacity(0.1))),
+                    ],
+                  ),
+                ),
+              ),
+            )
+          ],
         ),
-        ),
-      );
+      ),
+    );
 
   }
 }
 
-class TCircularContainer extends StatelessWidget {
-  const TCircularContainer({
-    super.key,
-  });
-  final double? width;
-  final double? height;
-  final double radius;
-  final double padding;
-  final Widget? child;
-  final Color backgroundCoIor;
 
 
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-    width: 400,
-    height: 400,
-    padding: const EdgeInsets.all(0),
-    decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(400),
-    color: TColors.textWhite.withopacity(0.1),
-
-        ),
-        );
-
-  }
-}
