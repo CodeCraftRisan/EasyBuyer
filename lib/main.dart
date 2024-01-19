@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:easybuyer/utils/theme/theme.dart';
+import 'package:easybuyer/utils/constants/colors.dart';
 
+import 'app.dart';
 
+//......entry point of flutter app........
 void main() {
+
+
+  
+
+
+
   runApp(const App());
 }
 
-class App extends StatelessWidget {
-  const App ({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      themeMode: ThemeMode.system,
-      theme : TAppTheme.lightTheme,
-      darkTheme: TAppTheme.darkTheme ,
-
-    );
-  }
-}
