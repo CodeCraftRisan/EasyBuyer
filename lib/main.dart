@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:easybuyer/utils/theme/theme.dart';
-import 'package:easybuyer/utils/constants/colors.dart';
+//import 'package:easybuyer/utils/theme/theme.dart';
+//import 'package:easybuyer/utils/constants/colors.dart';
 
 import 'app.dart';
 
